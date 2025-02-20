@@ -1,19 +1,19 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Region_Country = sequelize.define('Region_Country', {
-            reggionid: {
+const Country_State = sequelize.define('Country_State', {
+            countryid: {
         type: DataTypes.INTEGER,
         allowNull:false
         
         
     },
-    countryid: {
+    stateid: {
         type: DataTypes.INTEGER,
         allowNull: false
     }
 });
-module.exports = Region_Country;
+module.exports = Country_State;
 
 
 

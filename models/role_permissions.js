@@ -1,19 +1,16 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Region_Country = sequelize.define('Region_Country', {
-            reggionid: {
+const Role_Permissions = sequelize.define('Role_Permissions', {
+            roleid: {
         type: DataTypes.INTEGER,
         allowNull:false
         
         
     },
-    countryid: {
+    permissionsid: {
         type: DataTypes.INTEGER,
         allowNull: false
     }
 });
-module.exports = Region_Country;
-
-
-
+module.exports = Role_Permissions;

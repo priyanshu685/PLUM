@@ -1,15 +1,16 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const States = sequelize.define('State', {
-            stateid: {
+const Permissions = sequelize.define('Permissions', {
+            Permissionsid: {
         type: DataTypes.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        autoincrement: true
         
     },
-    stateName: {
+    PermissionsName: {
         type: DataTypes.STRING,
         allowNull: false
     }
 });
-module.exports = States;
+module.exports = Permissions;
